@@ -21,7 +21,7 @@ class Item_container extends React.Component {
 		      				
 		      				(
 
-		      					<All items={this.props.items}/> 
+		      					<h1>have items</h1>
 		      				):
 		      				<h2>No Items , Please Add Item</h2>
 		      			}

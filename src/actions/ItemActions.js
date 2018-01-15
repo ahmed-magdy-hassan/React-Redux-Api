@@ -43,22 +43,24 @@ export function AddItemToState(item) {
 }
 
 export function AddItem(item) {
+		var formdata = new  FormData();
+		formdata.append('image',item.image);
+		formdata.append('name',item.name);
+		formdata.append('desc',item.desc);
+		formdata.append('price',item.price);
+
 	return (dispatch)=>{
-			return axios.post('http://127.0.0.1:8000/api/items/create', {
-					name:item.name,
-					desc:item.desc,
-					price:item.price
-			  },{
-			  	 headers: {'Accept': 'application/json'}
+			return axios.post('http://127.0.0.1:8000/api/items/create', formdata,
+			  {     
+			    headers: { 'content-type': 'multipart/form-data' }
 			  }
 			  )
 			  .then(function (response) {
-				dispatch(AddItemToState(response.data.item));	  
+				//dispatch(AddItemToState(response.data.item));	  
 			  })
 			  .catch(function (error) {
-			    console.log(error.response);
+			    console.log(error.response.data);
 			});
-
 	};
 }
 

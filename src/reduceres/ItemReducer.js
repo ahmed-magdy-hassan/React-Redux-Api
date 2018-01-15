@@ -49,7 +49,7 @@ const ItemReducer = (state = Item, action) =>{
                 }
             };
             break;
-         case "Edit_Item":
+        case "Edit_Item":
                var item_data =  state.item_data.map(item => {
                     if (item.id === action.id) {
                         console.log(item[action.col]);
@@ -57,7 +57,6 @@ const ItemReducer = (state = Item, action) =>{
                     }
                    return item;
                 });
-
               state = {
                 ...state,
                 item_data: item_data
