@@ -44,7 +44,7 @@ export function AddItemToState(item) {
 
 export function AddItem(item) {
 		var formdata = new  FormData();
-		formdata.append('image',item.image);
+		formdata.append('image',item.image,item.image.name);
 		formdata.append('name',item.name);
 		formdata.append('desc',item.desc);
 		formdata.append('price',item.price);
@@ -56,7 +56,8 @@ export function AddItem(item) {
 			  }
 			  )
 			  .then(function (response) {
-				//dispatch(AddItemToState(response.data.item));	  
+
+				dispatch(AddItemToState(response.data.item));	  
 			  })
 			  .catch(function (error) {
 			    console.log(error.response.data);

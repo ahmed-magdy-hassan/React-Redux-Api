@@ -21,7 +21,7 @@ class Item_container extends React.Component {
 		      				
 		      				(
 
-		      					<h1>have items</h1>
+		      					<All />
 		      				):
 		      				<h2>No Items , Please Add Item</h2>
 		      			}

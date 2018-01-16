@@ -1,6 +1,4 @@
 import React from 'react';
-import FormData from 'form-data'
-
 import { connect } from 'react-redux';
 import {AddItem} from '../../actions/ItemActions';
 
