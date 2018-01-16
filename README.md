@@ -1,4 +1,4 @@
-This project was is react-redux project (https://github.com/Ahmed121446/React-Redux-Api).
+This project is react-redux project (https://github.com/Ahmed121446/React-Redux-Api).
 
 
 ## Installation
