@@ -36,7 +36,7 @@ const ItemReducer = (state = Item, action) =>{
               state = {
                 ...state,
                 item_data: [
-                    ...state.item_data.filter(item => item.id === action.payload)
+                    ...state.item_data.filter(item => item.id !== action.payload)
                 ]
             };
             break;
